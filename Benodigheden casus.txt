@@ -1,0 +1,8 @@
+SRS
+
+Requirements								: Compleet (wellicht afspraak maken)
+Use Case									: Minimaal aantal groepsleden * 2
+Use Case Beschrijving						: Idem
+COnceptueel Klasse diagram					: Compleet
+UML-activiteiten diagram (activity diagram)	: Minimaal het aantal groepsleden
+Mockup van prototype						: Ieder 1 "scherm"
