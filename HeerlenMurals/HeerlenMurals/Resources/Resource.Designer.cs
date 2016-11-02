@@ -318,6 +318,9 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f02002a
 			public const int Icon = 2130837546;
 			
+			// aapt resource value: 0x7f02002b
+			public const int Mural = 2130837547;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
