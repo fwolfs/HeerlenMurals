@@ -316,7 +316,7 @@ namespace HeerlenMurals
 			public const int common_plus_signin_btn_text_light_pressed = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int Icon = 2130837546;
+			public const int Menu_Murals = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
 			public const int Mural = 2130837547;
@@ -343,11 +343,23 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f07000a
 			public const int auto = 2131165194;
 			
+			// aapt resource value: 0x7f070011
+			public const int button_eigen_route = 2131165201;
+			
+			// aapt resource value: 0x7f070012
+			public const int button_instellingen = 2131165202;
+			
+			// aapt resource value: 0x7f07000d
+			public const int button_new = 2131165197;
+			
+			// aapt resource value: 0x7f070010
+			public const int button_vaste_route = 2131165200;
+			
 			// aapt resource value: 0x7f07000b
 			public const int dark = 2131165195;
 			
-			// aapt resource value: 0x7f07000d
-			public const int googlemap = 2131165197;
+			// aapt resource value: 0x7f07000e
+			public const int googlemap = 2131165198;
 			
 			// aapt resource value: 0x7f070000
 			public const int hybrid = 2131165184;
@@ -357,6 +369,9 @@ namespace HeerlenMurals
 			
 			// aapt resource value: 0x7f07000c
 			public const int light = 2131165196;
+			
+			// aapt resource value: 0x7f07000f
+			public const int linearLayout1 = 2131165199;
 			
 			// aapt resource value: 0x7f070001
 			public const int none = 2131165185;
@@ -406,7 +421,13 @@ namespace HeerlenMurals
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Map = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Menu = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Vaste_Route = 2130903042;
 			
 			static Layout()
 			{

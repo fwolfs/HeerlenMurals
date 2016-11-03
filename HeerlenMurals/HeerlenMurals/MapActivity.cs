@@ -2,11 +2,13 @@
 using Android.OS;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
+using Android.Widget;
+using Android.Content;
 
 namespace HeerlenMurals
 {
-    [Activity(Label = "Heerlen Murals", MainLauncher = true, Icon = "@drawable/mural")]
-    public class MainActivity : Activity, IOnMapReadyCallback
+    [Activity(Label = "Heerlen Murals")]
+    public class MapActivity : Activity, IOnMapReadyCallback
     {
         private GoogleMap GMap;
 
@@ -14,9 +16,14 @@ namespace HeerlenMurals
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Map);
+            
             SetUpMap();
+            Button button = FindViewById<Button>(Resource.Id.button_new);
+            button.Click += delegate 
+            {
+                StartActivity(typeof(MenuActivity));  
+            };
         }
         private void SetUpMap()
         {
