@@ -355,8 +355,8 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
-			// aapt resource value: 0x7f08000d
-			public const int googlemap = 2131230733;
+			// aapt resource value: 0x7f08000e
+			public const int googlemap = 2131230734;
 			
 			// aapt resource value: 0x7f080000
 			public const int hybrid = 2131230720;
@@ -385,8 +385,8 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f080004
 			public const int terrain = 2131230724;
 			
-			// aapt resource value: 0x7f08000e
-			public const int toolbar = 2131230734;
+			// aapt resource value: 0x7f08000d
+			public const int toolbar = 2131230733;
 			
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;

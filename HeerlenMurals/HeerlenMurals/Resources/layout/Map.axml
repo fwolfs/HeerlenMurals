@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <fragment
         class="com.google.android.gms.maps.MapFragment"
         android:id="@+id/googlemap"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-</FrameLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
+</RelativeLayout>

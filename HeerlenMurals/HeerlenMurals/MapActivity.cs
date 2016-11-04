@@ -4,6 +4,10 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Widget;
 using Android.Views;
+using Android.Locations;
+using Android.Runtime;
+using System;
+using Android.Content;
 
 namespace HeerlenMurals
 {
@@ -11,26 +15,32 @@ namespace HeerlenMurals
     public class MapActivity : Activity, IOnMapReadyCallback
     {
         private GoogleMap GMap;
+ 
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Map);
+            SetUpMap();
+            SetUpToolbar();
+        }
 
+        private void SetUpToolbar()
+        {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Heerlen Murals";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
-
-            SetUpMap();
         }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             base.OnBackPressed();
             return base.OnOptionsItemSelected(item);
         }
+
         private void SetUpMap()
         {
             if (GMap == null)
@@ -38,9 +48,18 @@ namespace HeerlenMurals
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.googlemap).GetMapAsync(this);
             }
         }
+
         public void OnMapReady(GoogleMap googleMap)
         {
             this.GMap = googleMap;
+            GMap.UiSettings.ZoomControlsEnabled = true;
+            GMap.MyLocationEnabled = true;
+            GMap.UiSettings.MyLocationButtonEnabled = true;
+            GMap.UiSettings.MapToolbarEnabled = false;
+            GMap.UiSettings.CompassEnabled = true;
+
+            LatLng latLng = new LatLng(50.88749555703811, 5.978665351867676);
+            GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(latLng,15));
 
             //Locaties Murals
             //Stationstraat 13, 6411 NH Heerlen
