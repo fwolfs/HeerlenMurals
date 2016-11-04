@@ -20,13 +20,17 @@ namespace HeerlenMurals
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
-            ActionBar.Title = "My Toolbar";
+            ActionBar.Title = "Heerlen Murals";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
 
             SetUpMap();
         }
-
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            base.OnBackPressed();
+            return base.OnOptionsItemSelected(item);
+        }
         private void SetUpMap()
         {
             if (GMap == null)
