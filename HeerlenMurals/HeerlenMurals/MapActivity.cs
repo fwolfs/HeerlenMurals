@@ -3,7 +3,7 @@ using Android.OS;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Widget;
-using Android.Content;
+using Android.Views;
 
 namespace HeerlenMurals
 {
@@ -17,14 +17,16 @@ namespace HeerlenMurals
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Map);
-            
+
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "My Toolbar";
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
+
             SetUpMap();
-            Button button = FindViewById<Button>(Resource.Id.button_new);
-            button.Click += delegate 
-            {
-                StartActivity(typeof(MenuActivity));  
-            };
         }
+
         private void SetUpMap()
         {
             if (GMap == null)
@@ -35,6 +37,7 @@ namespace HeerlenMurals
         public void OnMapReady(GoogleMap googleMap)
         {
             this.GMap = googleMap;
+
             //Locaties Murals
             //Stationstraat 13, 6411 NH Heerlen
             MarkerOptions Mural_1 = new MarkerOptions();
