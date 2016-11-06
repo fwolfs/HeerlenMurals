@@ -84,7 +84,10 @@
     <AndroidResource Include="Resources\layout\Menu.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Vaste_Route.axml">
+    <AndroidResource Include="Resources\layout\eigen_route.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Instellingen.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

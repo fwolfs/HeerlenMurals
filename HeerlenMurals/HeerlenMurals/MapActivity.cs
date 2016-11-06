@@ -52,6 +52,7 @@ namespace HeerlenMurals
 
         public void OnMapReady(GoogleMap googleMap)
         {
+            //init
             this.GMap = googleMap;
             GMap.UiSettings.ZoomControlsEnabled = true;
             GMap.MyLocationEnabled = true;
@@ -59,6 +60,7 @@ namespace HeerlenMurals
             GMap.UiSettings.MapToolbarEnabled = false;
             GMap.UiSettings.CompassEnabled = true;
 
+            //locatie
             LatLng latLng = new LatLng(50.88749555703811, 5.978665351867676);
             GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(latLng,15));
 

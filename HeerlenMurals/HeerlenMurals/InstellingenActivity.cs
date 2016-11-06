@@ -19,7 +19,16 @@ namespace HeerlenMurals
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            SetContentView(Resource.Layout.Instellingen);
+            SetUpToolbar();
+        }
+        private void SetUpToolbar()
+        {
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "Instellingen";
+            ActionBar.SetDisplayHomeAsUpEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);
         }
     }
 }
