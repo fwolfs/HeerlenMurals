@@ -25,8 +25,6 @@ namespace HeerlenMurals
             SetContentView(Resource.Layout.Map);
             SetUpMap();
             SetUpToolbar();
-
-            DrawShortRoute();
         }
 
         private void SetUpToolbar()
@@ -57,7 +55,7 @@ namespace HeerlenMurals
             //init
             this.GMap = googleMap;
             GMap.UiSettings.ZoomControlsEnabled = true;
-            GMap.MyLocationEnabled = true;
+            //GMap.MyLocationEnabled = true;
             GMap.UiSettings.MyLocationButtonEnabled = true;
             GMap.UiSettings.MapToolbarEnabled = false;
             GMap.UiSettings.CompassEnabled = true;
@@ -192,6 +190,8 @@ namespace HeerlenMurals
             Mural_18.SetTitle("Untitled");
             Mural_18.SetSnippet("Info hier");
             GMap.AddMarker(Mural_18);
+
+            DrawShortRoute();
         }
 
         private void DrawShortRoute()
@@ -247,7 +247,7 @@ namespace HeerlenMurals
             rectOptions.Add(new LatLng(50.890355, 5.974374));
             rectOptions.Add(new LatLng(50.89045, 5.973918));
 
-            GMap.AddPolyline(rectOptions);
+            Polyline polyLine = GMap.AddPolyline(rectOptions);
         }
     }
 }
