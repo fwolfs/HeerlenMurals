@@ -8,6 +8,7 @@ using Android.Locations;
 using Android.Runtime;
 using System;
 using Android.Content;
+using Android.Support.V4.Content;
 
 namespace HeerlenMurals
 {

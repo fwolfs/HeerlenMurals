@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.googlemap.googlemap" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22" />
 	<application android:label="ToolbarFun" android:theme="@style/MyTheme">
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCRWAdIJMWbQO4C-m1T4cKHTL7hVlJfshs" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
