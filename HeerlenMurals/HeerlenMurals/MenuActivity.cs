@@ -20,18 +20,18 @@ namespace HeerlenMurals
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Menu);
 
-            Button button = FindViewById<Button>(Resource.Id.button_vaste_route);
-            button.Click += delegate
+            Button btnVasteRoute = FindViewById<Button>(Resource.Id.button_vaste_route);
+            btnVasteRoute.Click += delegate
             {
                 StartActivity(typeof(MapActivity));
             };
-            Button button1 = FindViewById<Button>(Resource.Id.button_eigen_route);
-            button1.Click += delegate
+            Button btnEigenRoute = FindViewById<Button>(Resource.Id.button_eigen_route);
+            btnEigenRoute.Click += delegate
             {
                 StartActivity(typeof(EigenActivity));
             };
-            Button button2 = FindViewById<Button>(Resource.Id.button_instellingen);
-            button2.Click += delegate
+            Button btnInstellingen = FindViewById<Button>(Resource.Id.button_instellingen);
+            btnInstellingen.Click += delegate
             {
                 StartActivity(typeof(InstellingenActivity));
             };

@@ -25,6 +25,8 @@ namespace HeerlenMurals
             SetContentView(Resource.Layout.Map);
             SetUpMap();
             SetUpToolbar();
+
+            DrawShortRoute();
         }
 
         private void SetUpToolbar()
@@ -190,6 +192,62 @@ namespace HeerlenMurals
             Mural_18.SetTitle("Untitled");
             Mural_18.SetSnippet("Info hier");
             GMap.AddMarker(Mural_18);
+        }
+
+        private void DrawShortRoute()
+        {
+            PolylineOptions rectOptions = new PolylineOptions();
+            rectOptions.Add(new LatLng(50.890609, 5.973794));
+            rectOptions.Add(new LatLng(50.890717, 5.972582));
+            rectOptions.Add(new LatLng(50.892128, 5.973258));
+            rectOptions.Add(new LatLng(50.892236, 5.973714));
+            rectOptions.Add(new LatLng(50.891874, 5.975581));
+            rectOptions.Add(new LatLng(50.892179, 5.976691));
+            rectOptions.Add(new LatLng(50.891959, 5.976241));
+            rectOptions.Add(new LatLng(50.891262, 5.977287));
+            rectOptions.Add(new LatLng(50.8909, 5.977796));
+            rectOptions.Add(new LatLng(50.891198, 5.978306));
+            rectOptions.Add(new LatLng(50.8909, 5.977796)); ;
+            rectOptions.Add(new LatLng(50.890504, 5.978419));
+            rectOptions.Add(new LatLng(50.890203, 5.979931));
+            rectOptions.Add(new LatLng(50.88979, 5.979915));
+            rectOptions.Add(new LatLng(50.889847, 5.977646));
+            rectOptions.Add(new LatLng(50.889766, 5.978322));
+            rectOptions.Add(new LatLng(50.888227, 5.979357));
+            rectOptions.Add(new LatLng(50.888315, 5.980715));
+            rectOptions.Add(new LatLng(50.887607, 5.98102));
+            rectOptions.Add(new LatLng(50.887604, 5.981358));
+            rectOptions.Add(new LatLng(50.88647, 5.982066));
+            rectOptions.Add(new LatLng(50.887293, 5.984207));
+            rectOptions.Add(new LatLng(50.887468, 5.985033));
+            rectOptions.Add(new LatLng(50.887106, 5.985355));
+            rectOptions.Add(new LatLng(50.887468, 5.985033));
+            rectOptions.Add(new LatLng(50.886484, 5.982013));
+            rectOptions.Add(new LatLng(50.887039, 5.97976));
+            rectOptions.Add(new LatLng(50.887086, 5.979674));
+            rectOptions.Add(new LatLng(50.887039, 5.97976));
+            rectOptions.Add(new LatLng(50.886007, 5.980173));
+            rectOptions.Add(new LatLng(50.885235, 5.979829));
+            rectOptions.Add(new LatLng(50.885174, 5.978644));
+            rectOptions.Add(new LatLng(50.885015, 5.97793));
+            rectOptions.Add(new LatLng(50.88448, 5.976589));
+            rectOptions.Add(new LatLng(50.884832, 5.976133));
+            rectOptions.Add(new LatLng(50.885262, 5.975951));
+            rectOptions.Add(new LatLng(50.885851, 5.977769));
+            rectOptions.Add(new LatLng(50.886924, 5.977158));
+            rectOptions.Add(new LatLng(50.886822, 5.976686));
+            rectOptions.Add(new LatLng(50.887309, 5.976364));
+            rectOptions.Add(new LatLng(50.886771, 5.974599));
+            rectOptions.Add(new LatLng(50.887763, 5.973553)); 
+            rectOptions.Add(new LatLng(50.887844, 5.973081));
+            rectOptions.Add(new LatLng(50.888044, 5.97255));
+            rectOptions.Add(new LatLng(50.887827, 5.973199));
+            rectOptions.Add(new LatLng(50.888869, 5.97321));
+            rectOptions.Add(new LatLng(50.890088, 5.974572));
+            rectOptions.Add(new LatLng(50.890355, 5.974374));
+            rectOptions.Add(new LatLng(50.89045, 5.973918));
+
+            GMap.AddPolyline(rectOptions);
         }
     }
 }
