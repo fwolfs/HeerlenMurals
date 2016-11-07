@@ -55,7 +55,7 @@ namespace HeerlenMurals
             //init
             this.GMap = googleMap;
             GMap.UiSettings.ZoomControlsEnabled = true;
-            //GMap.MyLocationEnabled = true;
+            GMap.MyLocationEnabled = true;
             GMap.UiSettings.MyLocationButtonEnabled = true;
             GMap.UiSettings.MapToolbarEnabled = false;
             GMap.UiSettings.CompassEnabled = true;
@@ -190,6 +190,13 @@ namespace HeerlenMurals
             Mural_18.SetTitle("Untitled");
             Mural_18.SetSnippet("Info hier");
             GMap.AddMarker(Mural_18);
+
+            //Groene Boord Heerlen
+            MarkerOptions Mural_19 = new MarkerOptions();
+            Mural_19.SetPosition(new LatLng(50.887077, 5.985465));
+            Mural_19.SetTitle("Trópicos");
+            Mural_19.SetSnippet("Info hier");
+            GMap.AddMarker(Mural_19);
 
             DrawShortRoute();
         }
