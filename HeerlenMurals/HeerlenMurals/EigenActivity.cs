@@ -30,5 +30,10 @@ namespace HeerlenMurals
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            base.OnBackPressed();
+            return base.OnOptionsItemSelected(item);
+        }
     }
 }

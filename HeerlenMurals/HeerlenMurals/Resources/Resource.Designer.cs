@@ -343,23 +343,20 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000a
 			public const int auto = 2131230730;
 			
-			// aapt resource value: 0x7f080011
-			public const int button_eigen_route = 2131230737;
-			
-			// aapt resource value: 0x7f080012
-			public const int button_instellingen = 2131230738;
-			
 			// aapt resource value: 0x7f080010
-			public const int button_vaste_route = 2131230736;
+			public const int button_eigen_route = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int button_instellingen = 2131230737;
+			
+			// aapt resource value: 0x7f08000f
+			public const int button_vaste_route = 2131230735;
 			
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
-			// aapt resource value: 0x7f080014
-			public const int duurste_route = 2131230740;
-			
-			// aapt resource value: 0x7f08000e
-			public const int googlemap = 2131230734;
+			// aapt resource value: 0x7f080012
+			public const int googlemap = 2131230738;
 			
 			// aapt resource value: 0x7f080000
 			public const int hybrid = 2131230720;
@@ -373,8 +370,8 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
-			// aapt resource value: 0x7f08000f
-			public const int linearLayout1 = 2131230735;
+			// aapt resource value: 0x7f08000e
+			public const int linearLayout1 = 2131230734;
 			
 			// aapt resource value: 0x7f080015
 			public const int natuur_route = 2131230741;
@@ -399,6 +396,9 @@ namespace HeerlenMurals
 			
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;
+			
+			// aapt resource value: 0x7f080014
+			public const int winkel_route = 2131230740;
 			
 			static Id()
 			{
@@ -433,13 +433,13 @@ namespace HeerlenMurals
 			public const int eigen_route = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Instellingen = 2130903041;
+			public const int hoofdmenu = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Map = 2130903042;
+			public const int Instellingen = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Menu = 2130903043;
+			public const int Map = 2130903043;
 			
 			// aapt resource value: 0x7f030004
 			public const int toolbar = 2130903044;

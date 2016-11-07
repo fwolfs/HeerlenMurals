@@ -18,7 +18,7 @@ namespace HeerlenMurals
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Menu);
+            SetContentView(Resource.Layout.hoofdmenu);
 
             Button btnVasteRoute = FindViewById<Button>(Resource.Id.button_vaste_route);
             btnVasteRoute.Click += delegate

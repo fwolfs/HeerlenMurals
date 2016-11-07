@@ -25,7 +25,13 @@ namespace HeerlenMurals
             SetUpMap();
             SetUpToolbar();
         }
-
+        private void SetUpMap()
+        {
+            if (GMap == null)
+            {
+                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.googlemap).GetMapAsync(this);
+            }
+        }
         private void SetUpToolbar()
         {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
@@ -34,13 +40,11 @@ namespace HeerlenMurals
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Layout.top_menu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
-
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
 
@@ -50,21 +54,18 @@ namespace HeerlenMurals
             }
             if (item.ItemId == Resource.Id.kortste_route)
             {
-                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + "Geselecteerd", ToastLength.Short).Show();
                 drawShortRoute();
+                return base.OnOptionsItemSelected(item);
+            }
+            if (item.ItemId == Resource.Id.winkel_route)
+            {
+                Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
                 return base.OnOptionsItemSelected(item);
             }
             if (item.ItemId == Resource.Id.natuur_route)
             {
-                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
-                return base.OnOptionsItemSelected(item);
-            }
-            if (item.ItemId == Resource.Id.duurste_route)
-            {
-                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
+                Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
                 return base.OnOptionsItemSelected(item);
             }
             else
@@ -72,15 +73,6 @@ namespace HeerlenMurals
                 return base.OnOptionsItemSelected(item);
             }
         }
-
-        private void SetUpMap()
-        {
-            if (GMap == null)
-            {
-                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.googlemap).GetMapAsync(this);
-            }
-        }
-
         public void OnMapReady(GoogleMap googleMap)
         {
             //init
@@ -95,7 +87,29 @@ namespace HeerlenMurals
             LatLng latLng = new LatLng(50.88749555703811, 5.978665351867676);
             GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(latLng,15));
 
-            //Locaties Murals
+            //teken murals op kaart
+            drawMuralMarkers();
+
+            GMap.InfoWindowClick += MapOnInfoWindowClick;
+        }
+        private void MapOnInfoWindowClick(object sender, GoogleMap.InfoWindowClickEventArgs e)
+        {
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.SetTitle("Mural");
+            alert.SetMessage("Informatie over de mural");
+            alert.SetPositiveButton("Oké", (senderAlert, args) => 
+            {
+                Toast.MakeText(this, "Pressed Oké!", ToastLength.Short).Show();
+            });
+
+            Dialog dialog = alert.Create();
+            dialog.Show();
+        }
+
+        private void drawMuralMarkers()
+        {
+            //Locatie Murals
+
             //Stationstraat 13, 6411 NH Heerlen
             MarkerOptions Mural_1 = new MarkerOptions();
             Mural_1.SetPosition(new LatLng(50.8897834, 5.977796300000023));
@@ -229,7 +243,6 @@ namespace HeerlenMurals
             Mural_19.SetSnippet("Info hier");
             GMap.AddMarker(Mural_19);
         }
-
         public void drawShortRoute()
         {
             PolylineOptions rectOptions = new PolylineOptions();
@@ -286,10 +299,6 @@ namespace HeerlenMurals
             Polyline kortsteroute = GMap.AddPolyline(rectOptions);
         }
 
-        private void removeAllPolylines()
-        {
-
-        }
     }
 }
 
