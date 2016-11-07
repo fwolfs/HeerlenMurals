@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+       android:id="@+id/kortste_route"
+       android:showAsAction="never"
+       android:title="Korte Route" />
+  <item
+      android:id="@+id/duurste_route"
+      android:showAsAction="never"
+      android:title="Duurste Route" />
+  <item
+      android:id="@+id/natuur_route"
+      android:showAsAction="never"
+      android:title="Natuur Route" />
+</menu>

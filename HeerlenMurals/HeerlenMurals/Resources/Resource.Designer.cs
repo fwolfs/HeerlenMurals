@@ -355,6 +355,9 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
+			// aapt resource value: 0x7f080014
+			public const int duurste_route = 2131230740;
+			
 			// aapt resource value: 0x7f08000e
 			public const int googlemap = 2131230734;
 			
@@ -364,11 +367,17 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f080007
 			public const int icon_only = 2131230727;
 			
+			// aapt resource value: 0x7f080013
+			public const int kortste_route = 2131230739;
+			
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
 			// aapt resource value: 0x7f08000f
 			public const int linearLayout1 = 2131230735;
+			
+			// aapt resource value: 0x7f080015
+			public const int natuur_route = 2131230741;
 			
 			// aapt resource value: 0x7f080001
 			public const int none = 2131230721;
@@ -434,6 +443,9 @@ namespace HeerlenMurals
 			
 			// aapt resource value: 0x7f030004
 			public const int toolbar = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int top_menu = 2130903045;
 			
 			static Layout()
 			{

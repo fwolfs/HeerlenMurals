@@ -17,7 +17,6 @@ namespace HeerlenMurals
     {
         private GoogleMap GMap;
  
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -36,10 +35,42 @@ namespace HeerlenMurals
             ActionBar.SetHomeButtonEnabled(true);
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Layout.top_menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            base.OnBackPressed();
-            return base.OnOptionsItemSelected(item);
+
+            if (item.ItemId == Android.Resource.Id.Home)
+            {
+                base.OnBackPressed();
+            }
+            if (item.ItemId == Resource.Id.kortste_route)
+            {
+                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
+                drawShortRoute();
+                return base.OnOptionsItemSelected(item);
+            }
+            if (item.ItemId == Resource.Id.natuur_route)
+            {
+                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
+                return base.OnOptionsItemSelected(item);
+            }
+            if (item.ItemId == Resource.Id.duurste_route)
+            {
+                Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
+                return base.OnOptionsItemSelected(item);
+            }
+            else
+            {
+                return base.OnOptionsItemSelected(item);
+            }
         }
 
         private void SetUpMap()
@@ -197,11 +228,9 @@ namespace HeerlenMurals
             Mural_19.SetTitle("Trópicos");
             Mural_19.SetSnippet("Info hier");
             GMap.AddMarker(Mural_19);
-
-            DrawShortRoute();
         }
 
-        private void DrawShortRoute()
+        public void drawShortRoute()
         {
             PolylineOptions rectOptions = new PolylineOptions();
             rectOptions.Add(new LatLng(50.890609, 5.973794));
@@ -245,7 +274,7 @@ namespace HeerlenMurals
             rectOptions.Add(new LatLng(50.886822, 5.976686));
             rectOptions.Add(new LatLng(50.887309, 5.976364));
             rectOptions.Add(new LatLng(50.886771, 5.974599));
-            rectOptions.Add(new LatLng(50.887763, 5.973553)); 
+            rectOptions.Add(new LatLng(50.887763, 5.973553));
             rectOptions.Add(new LatLng(50.887844, 5.973081));
             rectOptions.Add(new LatLng(50.888044, 5.97255));
             rectOptions.Add(new LatLng(50.887827, 5.973199));
@@ -253,8 +282,13 @@ namespace HeerlenMurals
             rectOptions.Add(new LatLng(50.890088, 5.974572));
             rectOptions.Add(new LatLng(50.890355, 5.974374));
             rectOptions.Add(new LatLng(50.89045, 5.973918));
+                
+            Polyline kortsteroute = GMap.AddPolyline(rectOptions);
+        }
 
-            Polyline polyLine = GMap.AddPolyline(rectOptions);
+        private void removeAllPolylines()
+        {
+
         }
     }
 }
