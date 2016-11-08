@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ApplicationName">HeerlenMurals</string>
+  <string name="Creator">Maker:</string>
+  <string name="Creation_date">Maak Datum:</string>
 </resources>
+
