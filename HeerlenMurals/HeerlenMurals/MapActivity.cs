@@ -120,7 +120,7 @@ namespace HeerlenMurals
             GMap.MarkerClick += MapOnMarkerClick;  
         }
         private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
-        {
+        {     
             markerClickEventArgs.Handled = true;
             Marker marker = markerClickEventArgs.Marker;
             var ID = marker.Id.Remove(0, 1);
@@ -153,108 +153,69 @@ namespace HeerlenMurals
             }
         }
         private void drawMuralMarkers()
-        {
+        {                       
             //Locatie Murals
-
             //Stationstraat 13, 6411 NH Heerlen
-            MarkerOptions Mural_1 = new MarkerOptions();
-            Mural_1.SetPosition(new LatLng(50.8897834, 5.977796300000023));
-            GMap.AddMarker(Mural_1);
-
+            MarkerOptions Mural_markers = new MarkerOptions();
+            Mural_markers.SetPosition(new LatLng(50.8897834, 5.977796300000023));
+            GMap.AddMarker(Mural_markers);
             //Gasthuisstraat 2, 6411 KE Heerlen
-            MarkerOptions Mural_2 = new MarkerOptions();
-            Mural_2.SetPosition(new LatLng(50.88751269999999, 5.981181500000048));
-            GMap.AddMarker(Mural_2);
-
+            Mural_markers.SetPosition(new LatLng(50.88751269999999, 5.981181500000048));
+            GMap.AddMarker(Mural_markers);
             //Plaarstraat 14, 6411 JV Heerlen
-            MarkerOptions Mural_3 = new MarkerOptions();
-            Mural_3.SetPosition(new LatLng(50.8871116, 5.981422199999997));
-            GMap.AddMarker(Mural_3);
-
+            Mural_markers.SetPosition(new LatLng(50.8871116, 5.981422199999997));
+            GMap.AddMarker(Mural_markers);
             //Spoorsingel 60, 6412 AA Heerlen
-            MarkerOptions Mural_4 = new MarkerOptions();
-            Mural_4.SetPosition(new LatLng(50.891703, 5.976202999999941));
-            GMap.AddMarker(Mural_4);
-
+            Mural_markers.SetPosition(new LatLng(50.891703, 5.976202999999941));
+            GMap.AddMarker(Mural_markers);
             //Spoorsingel 50, 6412 AC Heerlen
-            MarkerOptions Mural_5 = new MarkerOptions();
-            Mural_5.SetPosition(new LatLng(50.89182419999999, 5.976532600000041));
-            GMap.AddMarker(Mural_5);
-
+            Mural_markers.SetPosition(new LatLng(50.89182419999999, 5.976532600000041));
+            GMap.AddMarker(Mural_markers);
             //Spoorsingel 44, 6412 AC Heerlen
-            MarkerOptions Mural_6 = new MarkerOptions();
-            Mural_6.SetPosition(new LatLng(50.8911625, 5.977618500000062));
-            GMap.AddMarker(Mural_6);
-
+            Mural_markers.SetPosition(new LatLng(50.8911625, 5.977618500000062));
+            GMap.AddMarker(Mural_markers);
             //Kempkensweg 3, 6412 Heerlen
-            MarkerOptions Mural_7 = new MarkerOptions();
-            Mural_7.SetPosition(new LatLng(50.8921635, 5.976991699999985));
-            GMap.AddMarker(Mural_7);
-
+            Mural_markers.SetPosition(new LatLng(50.8921635, 5.976991699999985));
+            GMap.AddMarker(Mural_markers);
             //Robroekergats 79, 6412 AX Heerlen
-            MarkerOptions Mural_8 = new MarkerOptions();
-            Mural_8.SetPosition(new LatLng(50.8912132, 5.97824449999996));
-            GMap.AddMarker(Mural_8);
-
+            Mural_markers.SetPosition(new LatLng(50.8912132, 5.97824449999996));
+            GMap.AddMarker(Mural_markers);
             //Spoorsingel 4, 6412 AA Heerlen
-            MarkerOptions Mural_9 = new MarkerOptions();
-            Mural_9.SetPosition(new LatLng(50.8906907, 5.978479399999969));
-            GMap.AddMarker(Mural_9);
-
+            Mural_markers.SetPosition(new LatLng(50.8906907, 5.978479399999969));
+            GMap.AddMarker(Mural_markers);
             //Spoorsingel 2, 6412 AA Heerlen
-            MarkerOptions Mural_10 = new MarkerOptions();
-            Mural_10.SetPosition(new LatLng(50.8905998, 5.978662999999983));
-            GMap.AddMarker(Mural_10);
-
+            Mural_markers.SetPosition(new LatLng(50.8905998, 5.978662999999983));
+            GMap.AddMarker(Mural_markers);
             //Pancratiusstraat 44, 6411 KC Heerlen
-            MarkerOptions Mural_11 = new MarkerOptions();
-            Mural_11.SetPosition(new LatLng(50.8873042, 5.979772000000025));
-            GMap.AddMarker(Mural_11);
-
+            Mural_markers.SetPosition(new LatLng(50.8873042, 5.979772000000025));
+            GMap.AddMarker(Mural_markers);
             //Nobelstraat 16, 6411 EM Heerlen
-            MarkerOptions Mural_12 = new MarkerOptions();
-            Mural_12.SetPosition(new LatLng(50.8853896, 5.97976170000004));
-            GMap.AddMarker(Mural_12);
-
+            Mural_markers.SetPosition(new LatLng(50.8853896, 5.97976170000004));
+            GMap.AddMarker(Mural_markers);
             //Coriovallumstraat 7, 6411 CA Heerlen
-            MarkerOptions Mural_13 = new MarkerOptions();
-            Mural_13.SetPosition(new LatLng(50.8856446, 5.977349099999969));
-            GMap.AddMarker(Mural_13);
-
+            Mural_markers.SetPosition(new LatLng(50.8856446, 5.977349099999969));
+            GMap.AddMarker(Mural_markers);
             //Kruisstraat 51, 6411 BR Heerlen
-            MarkerOptions Mural_14 = new MarkerOptions();
-            Mural_14.SetPosition(new LatLng(50.8843429, 5.977019899999959));
-            GMap.AddMarker(Mural_14);
-
+            Mural_markers.SetPosition(new LatLng(50.8843429, 5.977019899999959));
+            GMap.AddMarker(Mural_markers);
             //Coriovallumstraat 26, 6411 CC Heerlen
-            MarkerOptions Mural_15 = new MarkerOptions();
-            Mural_15.SetPosition(new LatLng(50.8855164, 5.976054400000066));
-            GMap.AddMarker(Mural_15);
-
+            Mural_markers.SetPosition(new LatLng(50.8855164, 5.976054400000066));
+            GMap.AddMarker(Mural_markers);
             //Honigmannstraat 2, 6411 LL Heerlen
-            MarkerOptions Mural_16 = new MarkerOptions();
-            Mural_16.SetPosition(new LatLng(50.8869963, 5.976698499999998));
-            GMap.AddMarker(Mural_16);
-
+            Mural_markers.SetPosition(new LatLng(50.8869963, 5.976698499999998));
+            GMap.AddMarker(Mural_markers);
             //Geerstraat 2, 6411 NR Heerlen
-            MarkerOptions Mural_17 = new MarkerOptions();
-            Mural_17.SetPosition(new LatLng(50.8869257, 5.974665400000049));
-            GMap.AddMarker(Mural_17);
-
+            Mural_markers.SetPosition(new LatLng(50.8869257, 5.974665400000049));
+            GMap.AddMarker(Mural_markers);
             //Laanderstraat 27, 6411 VA Heerlen
-            MarkerOptions Mural_18 = new MarkerOptions();
-            Mural_18.SetPosition(new LatLng(50.8879613, 5.972532699999988));
-            GMap.AddMarker(Mural_18);
-
+            Mural_markers.SetPosition(new LatLng(50.8879613, 5.972532699999988));
+            GMap.AddMarker(Mural_markers);
             //Groene Boord Heerlen
-            MarkerOptions Mural_19 = new MarkerOptions();
-            Mural_19.SetPosition(new LatLng(50.887077, 5.985465));
-            GMap.AddMarker(Mural_19);
+            Mural_markers.SetPosition(new LatLng(50.887077, 5.985465));
+            GMap.AddMarker(Mural_markers);
         }
         public void drawShortRoute()
         {
-            GMap.Clear();
-            drawMuralMarkers();
             PolylineOptions route = new PolylineOptions();
 
             route.Add(new LatLng(50.890609, 5.973794));
@@ -311,8 +272,6 @@ namespace HeerlenMurals
         }
         public void drawNatureRoute()
         {
-            GMap.Clear();
-            drawMuralMarkers();
             PolylineOptions route = new PolylineOptions();
 
             route.Add(new LatLng(50.890443, 5.973676));
@@ -406,7 +365,6 @@ namespace HeerlenMurals
             route.Add(new LatLng(50.890417, 5.973891));
 
             Polyline mooisteroute = GMap.AddPolyline(route);
-            //GMap.Clear();
         }
     }
 }
