@@ -2,4 +2,9 @@
 <resources>
     <string name="Creator">Creator:</string>
     <string name="Creation_date">Creation date:</string>
+    <string name="Close">Close</string>
+    <string name="GPS_disabled">GPS is not enabled</string>
+    <string name="GPS_question">Want to enable it?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
 </resources>

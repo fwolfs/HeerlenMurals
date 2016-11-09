@@ -460,11 +460,26 @@ namespace HeerlenMurals
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040021
+			public const int Close = 2130968609;
+			
 			// aapt resource value: 0x7f040020
 			public const int Creation_date = 2130968608;
 			
 			// aapt resource value: 0x7f04001f
 			public const int Creator = 2130968607;
+			
+			// aapt resource value: 0x7f040022
+			public const int GPS_disabled = 2130968610;
+			
+			// aapt resource value: 0x7f040023
+			public const int GPS_question = 2130968611;
+			
+			// aapt resource value: 0x7f040025
+			public const int No = 2130968613;
+			
+			// aapt resource value: 0x7f040024
+			public const int Yes = 2130968612;
 			
 			// aapt resource value: 0x7f040001
 			public const int auth_google_play_services_client_facebook_display_name = 2130968577;

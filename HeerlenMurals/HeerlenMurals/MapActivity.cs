@@ -57,19 +57,19 @@ namespace HeerlenMurals
             }
             if (item.ItemId == Resource.Id.kortste_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + "Geselecteerd", ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
                 drawShortRoute();
-                //return base.OnOptionsItemSelected(item);
+                return base.OnOptionsItemSelected(item);
             }
             if (item.ItemId == Resource.Id.winkel_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + "Geselecteerd", ToastLength.Short).Show();
-                drawNatureRoute();
-                //return base.OnOptionsItemSelected(item);
+                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
+                return base.OnOptionsItemSelected(item);
             }
             if (item.ItemId == Resource.Id.natuur_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + "Geselecteerd", ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
+                drawNatureRoute();
                 return base.OnOptionsItemSelected(item);
             }
             else
@@ -94,6 +94,29 @@ namespace HeerlenMurals
             //teken murals op kaart
             drawMuralMarkers();
 
+            //GPS controle
+            LocationManager mlocManager = (LocationManager)GetSystemService(LocationService); ;
+            bool enabled = mlocManager.IsProviderEnabled(LocationManager.GpsProvider);
+            if (enabled == false)
+            {
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.SetTitle("GPS");
+                alert.SetMessage(GetString(Resource.String.GPS_disabled) + "\n" + GetString(Resource.String.GPS_question));
+                alert.SetNegativeButton(GetString(Resource.String.No), (senderAlert, args) =>
+                {
+
+                });
+                alert.SetPositiveButton(GetString(Resource.String.Yes), (senderAlert, args) =>
+                {
+                    var intent = new Intent(Android.Provider.Settings.ActionLocationSourceSettings);
+                    StartActivity(intent);
+                });
+
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+
+            //Maakt mogelijk dat je op marker kan klikken
             GMap.MarkerClick += MapOnMarkerClick;  
         }
         private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
@@ -119,8 +142,8 @@ namespace HeerlenMurals
                 string make_date_info =  GetString(Resource.String.Creation_date) + " " + make_date;
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
                 alert.SetTitle(title);
-                alert.SetMessage(maker_info + "\n" + make_date_info + "\n"+ website + "\n" + info);
-                alert.SetPositiveButton("Oké", (senderAlert, args) =>
+                alert.SetMessage(maker_info + "\n" + make_date_info + "\n"+ website + "\n" + "\n" + info);
+                alert.SetPositiveButton(GetString(Resource.String.Close), (senderAlert, args) =>
                 {
                 
                 });
@@ -230,6 +253,8 @@ namespace HeerlenMurals
         }
         public void drawShortRoute()
         {
+            GMap.Clear();
+            drawMuralMarkers();
             PolylineOptions route = new PolylineOptions();
 
             route.Add(new LatLng(50.890609, 5.973794));
@@ -286,6 +311,8 @@ namespace HeerlenMurals
         }
         public void drawNatureRoute()
         {
+            GMap.Clear();
+            drawMuralMarkers();
             PolylineOptions route = new PolylineOptions();
 
             route.Add(new LatLng(50.890443, 5.973676));
