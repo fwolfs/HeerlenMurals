@@ -26,7 +26,7 @@ namespace HeerlenMurals
         {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
-            ActionBar.Title = "Instellingen";
+            ActionBar.Title = "Heerlen Murals";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }
