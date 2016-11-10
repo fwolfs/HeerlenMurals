@@ -57,18 +57,18 @@ namespace HeerlenMurals
             }
             if (item.ItemId == Resource.Id.kortste_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + GetString(Resource.String.Selected), ToastLength.Short).Show();
                 drawShortRoute();
                 return base.OnOptionsItemSelected(item);
             }
             if (item.ItemId == Resource.Id.winkel_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + GetString(Resource.String.Selected), ToastLength.Short).Show();
                 return base.OnOptionsItemSelected(item);
             }
             if (item.ItemId == Resource.Id.natuur_route)
             {
-                Toast.MakeText(this, item.TitleFormatted + " Geselecteerd", ToastLength.Short).Show();
+                Toast.MakeText(this, item.TitleFormatted + GetString(Resource.String.Selected), ToastLength.Short).Show();
                 drawNatureRoute();
                 return base.OnOptionsItemSelected(item);
             }

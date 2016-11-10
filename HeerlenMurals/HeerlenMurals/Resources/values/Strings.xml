@@ -7,4 +7,11 @@
     <string name="GPS_question">Want to enable it?</string>
     <string name="Yes">Yes</string>
     <string name="No">No</string>
+    <string name="Information">Information</string>
+    <string name="Standard_routes">Standard Routes</string>
+    <string name="Make_own_route">Make Own Route</string>
+    <string name="Nature_route">Nature Route</string>
+    <string name="Shop_route">Shop Route</string>
+    <string name="Short_route">Short Route</string>
+    <string name="Selected">Selected</string>
 </resources>

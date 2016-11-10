@@ -3,13 +3,13 @@
   <item
        android:id="@+id/kortste_route"
        android:showAsAction="never"
-       android:title="Kortste Route" />
+       android:title="@string/Short_route" />
   <item
       android:id="@+id/winkel_route"
       android:showAsAction="never"
-      android:title="Shop / Winkel Route" />
+      android:title="@string/Shop_route" />
   <item
       android:id="@+id/natuur_route"
       android:showAsAction="never"
-      android:title="Natuur Route" />
+      android:title="@string/Nature_route" />
 </menu>

@@ -487,8 +487,29 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f040023
 			public const int GPS_question = 2130968611;
 			
+			// aapt resource value: 0x7f040026
+			public const int Information = 2130968614;
+			
+			// aapt resource value: 0x7f040028
+			public const int Make_own_route = 2130968616;
+			
+			// aapt resource value: 0x7f040029
+			public const int Nature_route = 2130968617;
+			
 			// aapt resource value: 0x7f040025
 			public const int No = 2130968613;
+			
+			// aapt resource value: 0x7f04002c
+			public const int Selected = 2130968620;
+			
+			// aapt resource value: 0x7f04002a
+			public const int Shop_route = 2130968618;
+			
+			// aapt resource value: 0x7f04002b
+			public const int Short_route = 2130968619;
+			
+			// aapt resource value: 0x7f040027
+			public const int Standard_routes = 2130968615;
 			
 			// aapt resource value: 0x7f040024
 			public const int Yes = 2130968612;
