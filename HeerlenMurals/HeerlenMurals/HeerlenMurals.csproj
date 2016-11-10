@@ -72,7 +72,7 @@
   <ItemGroup>
     <Compile Include="EigenActivity.cs" />
     <Compile Include="InfoActivity.cs" />
-    <Compile Include="InstellingenActivity.cs" />
+    <Compile Include="InformatieActivity.cs" />
     <Compile Include="MapActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,7 +88,7 @@
     <AndroidResource Include="Resources\layout\eigen_route.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Instellingen.axml">
+    <AndroidResource Include="Resources\layout\about.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

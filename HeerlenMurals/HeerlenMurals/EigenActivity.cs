@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace HeerlenMurals
 {
@@ -21,12 +22,15 @@ namespace HeerlenMurals
 
             SetContentView(Resource.Layout.eigen_route);
             SetUpToolbar();
+
+            TextView txteigenroute = FindViewById<TextView>(Resource.Id.textview1);
+            txteigenroute.SetTextColor(Color.ParseColor("#1B5E20"));
         }
         private void SetUpToolbar()
         {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
-            ActionBar.Title = "Heerlen Murals";
+            ActionBar.Title = "Eigen route samenstellen";
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }

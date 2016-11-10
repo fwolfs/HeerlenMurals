@@ -33,7 +33,7 @@ namespace HeerlenMurals
             Button btnInstellingen = FindViewById<Button>(Resource.Id.button_instellingen);
             btnInstellingen.Click += delegate
             {
-                StartActivity(typeof(InstellingenActivity));
+                StartActivity(typeof(InformatieActivity));
             };
         }
     }
