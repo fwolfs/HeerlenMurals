@@ -1,8 +1,10 @@
+//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
+//Gemaak in 2016 op Hogeschool Zuyd
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -15,6 +17,8 @@ namespace HeerlenMurals
     [Activity(Label = "Heerlen Murals", MainLauncher = true, Icon = "@drawable/mural", Theme = "@android:style/Theme.NoTitleBar")]
     public class MenuActivity : Activity
     {
+        //Hier worden functies aan de 3 knoppen in het hoofdmenu toegewezen
+        //Elke knop start een bepaalde Activity
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

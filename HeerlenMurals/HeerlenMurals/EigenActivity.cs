@@ -1,3 +1,6 @@
+//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
+//Gemaak in 2016 op Hogeschool Zuyd
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +18,7 @@ namespace HeerlenMurals
     [Activity(Label = "EigenActivity")]
     public class EigenActivity : Activity
     {
+        //Hier worden de functie Toolbar aangeroepen.
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -25,6 +29,7 @@ namespace HeerlenMurals
             TextView txteigenroute = FindViewById<TextView>(Resource.Id.textview1);
             txteigenroute.SetTextColor(Color.ParseColor("#1B5E20"));
         }
+        //Hier wordt de toolbar functies aangezet/uitgezet en een title toegewezen
         private void SetUpToolbar()
         {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
@@ -33,6 +38,7 @@ namespace HeerlenMurals
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }
+        //Hier worden de functies aan de knoppen van de toolbar menu toegewezen
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             base.OnBackPressed();

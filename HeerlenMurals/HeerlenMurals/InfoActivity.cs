@@ -1,3 +1,6 @@
+//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
+//Gemaak in 2016 op Hogeschool Zuyd
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +17,11 @@ namespace HeerlenMurals
     [Activity(Label = "InfoActivity")]
     public class InfoActivity : Activity
     {
+        //In deze Activity worden er lijsten gecreëerd met informatie van de Murals
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            //Hier wordt de ID ontvangen die vanuit MapActivity naar InfoActivity zijn gestuurd
             string Id = Intent.GetStringExtra("ID") ?? "Data not available";
             string[] Title = new string[]
             {
@@ -129,6 +133,8 @@ namespace HeerlenMurals
                 "Ethos was born in São Paulo in 1982 and currently lives and work there. He began putting in work around the age of 15 with spray paint as well as ballpoint pen, which to this day serves as his primary tools. The content this work, both indoors and outdoors, is inevitably related to the struggle of day-to-day existence that Sao Paulistas experience. Population density and the constant strain of urban anxiety become the subjects for many of Ethos’ narratives.Ethos’ characters have undeniably become some of the most recognized all throughout Brazil with his ephemeral work at times straddling the line of the figurative and abstract. His elongated, flexible, and strained figures have an almost liquid quality to them; one foot firmly in the school of the surrealists.He also displays a solid grasp of textiles in the use of patterns.Huge black balls serve as eyes for the exhausted and maligned residents of the concrete jungle.These characters are a mixture of dreams and fragments of everyday life within the city.",
                 "Finok (Sao Paulo) noticed some kids painting graffiti in the street back in 2002. He was intrigued by this creative but illegal activity and quickly got into the”graffiti game” himself. A few years later he became a member of the infamous Vlok crew consisting of graffiti legends like Os Gemeos, Nunca, lse, Vino, Remio and many others. The cultural diversity and ethnic composition of his motherland have great influence on his work. He tries to capture the daily life in a poetic way with humor, and uses hereby elements that people can easily overlook in his art."
             };
+            //Nadat de Id is ontvangen wordt uit alle lijsten de juiste informatie gehaald
+            //Hierna wordt alle informatie van de betreffende marker naar de MapActivity gestuurd
             int i = Convert.ToInt32(Id);
             var Mural = new Intent(this, typeof(MapActivity));
             Mural.PutExtra("Title", Title[i]);

@@ -22,8 +22,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/titel"
+        android:gravity="center" />
+    <ImageView
+        android:src="@drawable/heerlen"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
         android:gravity="center"
-        android:paddingBottom="230dp" />
+        android:id="@+id/gemeente_heerlen"
+        android:layout_below="@id/informatie" />
+    <ImageView
+        android:src="@drawable/zuyd"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:gravity="center"
+        android:id="@+id/zuyd_hogeschool"
+        android:layout_below="@id/gemeente_heerlen"
+        android:layout_marginTop="4.5dp" />
     <TextView
         android:id="@+id/signature"
         android:text="Gemaakt door Dani Truijen, Pascal Vos &amp; Folkert Wolfs \n Zuyd Hogeschool Heerlen 2016 \n \n Make Heerlen Great again!"
@@ -31,5 +45,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_below="@id/informatie" />
+        android:layout_below="@id/zuyd_hogeschool" />
 </RelativeLayout>

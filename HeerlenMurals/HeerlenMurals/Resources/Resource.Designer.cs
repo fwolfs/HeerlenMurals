@@ -316,10 +316,16 @@ namespace HeerlenMurals
 			public const int common_plus_signin_btn_text_light_pressed = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int Menu_Murals = 2130837546;
+			public const int Heerlen = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int Mural = 2130837547;
+			public const int Menu_Murals = 2130837547;
+			
+			// aapt resource value: 0x7f02002c
+			public const int Mural = 2130837548;
+			
+			// aapt resource value: 0x7f02002d
+			public const int Zuyd = 2130837549;
 			
 			static Drawable()
 			{
@@ -343,20 +349,23 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000a
 			public const int auto = 2131230730;
 			
-			// aapt resource value: 0x7f080014
-			public const int button_eigen_route = 2131230740;
+			// aapt resource value: 0x7f080016
+			public const int button_eigen_route = 2131230742;
+			
+			// aapt resource value: 0x7f080017
+			public const int button_instellingen = 2131230743;
 			
 			// aapt resource value: 0x7f080015
-			public const int button_instellingen = 2131230741;
-			
-			// aapt resource value: 0x7f080013
-			public const int button_vaste_route = 2131230739;
+			public const int button_vaste_route = 2131230741;
 			
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
-			// aapt resource value: 0x7f080016
-			public const int googlemap = 2131230742;
+			// aapt resource value: 0x7f080010
+			public const int gemeente_heerlen = 2131230736;
+			
+			// aapt resource value: 0x7f080018
+			public const int googlemap = 2131230744;
 			
 			// aapt resource value: 0x7f080000
 			public const int hybrid = 2131230720;
@@ -367,17 +376,17 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f08000f
 			public const int informatie = 2131230735;
 			
-			// aapt resource value: 0x7f080017
-			public const int kortste_route = 2131230743;
+			// aapt resource value: 0x7f080019
+			public const int kortste_route = 2131230745;
 			
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
-			// aapt resource value: 0x7f080012
-			public const int linearLayout1 = 2131230738;
+			// aapt resource value: 0x7f080014
+			public const int linearLayout1 = 2131230740;
 			
-			// aapt resource value: 0x7f080019
-			public const int natuur_route = 2131230745;
+			// aapt resource value: 0x7f08001b
+			public const int natuur_route = 2131230747;
 			
 			// aapt resource value: 0x7f080001
 			public const int none = 2131230721;
@@ -388,8 +397,8 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f080003
 			public const int satellite = 2131230723;
 			
-			// aapt resource value: 0x7f080010
-			public const int signature = 2131230736;
+			// aapt resource value: 0x7f080012
+			public const int signature = 2131230738;
 			
 			// aapt resource value: 0x7f080008
 			public const int standard = 2131230728;
@@ -397,8 +406,8 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f080004
 			public const int terrain = 2131230724;
 			
-			// aapt resource value: 0x7f080011
-			public const int textview1 = 2131230737;
+			// aapt resource value: 0x7f080013
+			public const int textview1 = 2131230739;
 			
 			// aapt resource value: 0x7f08000e
 			public const int titel = 2131230734;
@@ -409,8 +418,11 @@ namespace HeerlenMurals
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;
 			
-			// aapt resource value: 0x7f080018
-			public const int winkel_route = 2131230744;
+			// aapt resource value: 0x7f08001a
+			public const int winkel_route = 2131230746;
+			
+			// aapt resource value: 0x7f080011
+			public const int zuyd_hogeschool = 2131230737;
 			
 			static Id()
 			{

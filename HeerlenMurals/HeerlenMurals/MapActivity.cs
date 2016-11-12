@@ -1,4 +1,7 @@
-﻿using Android.App;
+﻿//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
+//Gemaak in 2016 op Hogeschool Zuyd
+
+using Android.App;
 using Android.OS;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
@@ -20,14 +23,18 @@ namespace HeerlenMurals
     {
         private GoogleMap GMap;
 
+        //Hier worden de functie Map en Toolbar aangeroepen.
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Map);
+            //Functie map wordt hier aangeroepen
             SetUpMap();
+            //Functie toolbar wordt hier aangeroepen
             SetUpToolbar();
         }
+        //Hier wordt de Map gemaakt
         private void SetUpMap()
         {
             if (GMap == null)
@@ -35,6 +42,7 @@ namespace HeerlenMurals
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.googlemap).GetMapAsync(this);
             }
         }
+        //Hier wordt de toolbar functies aangezet/uitgezet en een title toegewezen
         private void SetUpToolbar()
         {
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
@@ -43,11 +51,13 @@ namespace HeerlenMurals
             ActionBar.SetDisplayHomeAsUpEnabled(true);
             ActionBar.SetHomeButtonEnabled(true);
         }
+        //Hier worden de knoppen van de toolbar aangemaakt
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Layout.top_menu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
+        //Hier worden de functies aan de knoppen van de toolbar menu toegewezen
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
 
@@ -77,9 +87,10 @@ namespace HeerlenMurals
                 return base.OnOptionsItemSelected(item);
             }
         }
+        //In deze functie worden de map functies geladen en de map klaar gemaakt voor gebruik voor Heerlen Murals
         public void OnMapReady(GoogleMap googleMap)
         {
-            //init
+            //Hier worden de functies van Google Map aangezet/uitgezet
             this.GMap = googleMap;
             GMap.UiSettings.ZoomControlsEnabled = true;
             GMap.MyLocationEnabled = true;
@@ -87,14 +98,14 @@ namespace HeerlenMurals
             GMap.UiSettings.MapToolbarEnabled = false;
             GMap.UiSettings.CompassEnabled = true;
 
-            //locatie
+            //Camera van Google maps wordt naar de stad Heerlen gezet
             LatLng latLng = new LatLng(50.88749555703811, 5.978665351867676);
             GMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(latLng,15));
 
-            //teken murals op kaart
+            //Functie voor tekenen van de Markers van de murals wordt aangeroepen
             drawMuralMarkers();
 
-            //GPS controle
+            //GPS controle of die aan of uit staat
             LocationManager mlocManager = (LocationManager)GetSystemService(LocationService); ;
             bool enabled = mlocManager.IsProviderEnabled(LocationManager.GpsProvider);
             if (enabled == false)
@@ -106,6 +117,7 @@ namespace HeerlenMurals
                 {
 
                 });
+                //Als gebruiker GPS aan wilt zetten wordt de gebruiker naar Locatie setting gestuurd van de telefoon
                 alert.SetPositiveButton(GetString(Resource.String.Yes), (senderAlert, args) =>
                 {
                     var intent = new Intent(Android.Provider.Settings.ActionLocationSourceSettings);
@@ -115,10 +127,12 @@ namespace HeerlenMurals
                 Dialog dialog = alert.Create();
                 dialog.Show();
             }
-
-            //Maakt mogelijk dat je op marker kan klikken
+      
+            //Maakt mogelijk dat je op marker kan klikken van een Mural
             GMap.MarkerClick += MapOnMarkerClick;  
         }
+        //Deze functie zorgt ervoor dat de gebruiker op een Marker kan klikken 
+        //Wanneer dit gebeurd wordt er een ID van de marker naar de InfoActivity gestuurd
         private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
         {     
             markerClickEventArgs.Handled = true;
@@ -128,6 +142,7 @@ namespace HeerlenMurals
             Mural.PutExtra("ID", ID);
             StartActivityForResult(Mural, 0);   
         }
+        //Hier wordt de gegevens ontvangen die vanuit InfoActivity naar MapActivity zijn gestuurd en weergegeven in een Alertdialog
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
@@ -152,6 +167,7 @@ namespace HeerlenMurals
                 dialog.Show();
             }
         }
+        //In deze functie staan de locaties waar elke Marker moet komen te staan, en worden de markers getekend
         private void drawMuralMarkers()
         {                       
             //Locatie Murals
@@ -214,6 +230,7 @@ namespace HeerlenMurals
             Mural_markers.SetPosition(new LatLng(50.887077, 5.985465));
             GMap.AddMarker(Mural_markers);
         }
+        //In deze functie staan de coordinaten hoe de kortste route moet gaan lopen, en deze worden getekend
         public void drawShortRoute()
         {
             PolylineOptions route = new PolylineOptions();
@@ -270,6 +287,7 @@ namespace HeerlenMurals
                 
             Polyline kortsteroute = GMap.AddPolyline(route);
         }
+        //In deze functie staan de coordinaten hoe de natuur route moet gaan lopen, en deze worden getekend
         public void drawNatureRoute()
         {
             PolylineOptions route = new PolylineOptions();
