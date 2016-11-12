@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mural">
+    android:background="@android:color/background_light">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -13,17 +13,18 @@
         android:id="@+id/linearLayout1"
         android:background="@drawable/menu_murals" />
     <Button
-        android:text="Vaste Routes"
+        android:text="@string/Standard_routes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_vaste_route" />
     <Button
-        android:text="Eigen Route Samenstellen"
+        android:text="@string/Make_own_route"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_eigen_route" />
+        android:id="@+id/button_eigen_route"
+        android:layout_marginBottom="36dp" />
     <Button
-        android:text="Instellingen"
+        android:text="@string/Information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_instellingen" />

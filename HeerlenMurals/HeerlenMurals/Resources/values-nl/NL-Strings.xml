@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ApplicationName">HeerlenMurals</string>
+    <string name="Creator">Maker:</string>
+    <string name="Creation_date">Maak Datum:</string>
+    <string name="Close">Sluiten</string>
+    <string name="GPS_disabled">GPS staat niet aan</string>
+    <string name="GPS_question">Wil je deze aanzetten?</string>
+    <string name="Yes">Ja</string>
+    <string name="No">Nee</string>
+    <string name="Information">Informatie</string>
+    <string name="Standard_routes">Vaste Route</string>
+    <string name="Make_own_route">Eigen Route Samenstellen</string>
+    <string name="Nature_route">Natuur Route</string>
+    <string name="Shop_route">Winkel Route</string>
+    <string name="Short_route">Kortste Route</string>
+    <string name="Selected">Geselecteerd</string>
 </resources>

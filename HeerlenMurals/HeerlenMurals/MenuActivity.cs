@@ -1,8 +1,10 @@
+//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
+//Gemaak in 2016 op Hogeschool Zuyd
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -15,25 +17,27 @@ namespace HeerlenMurals
     [Activity(Label = "Heerlen Murals", MainLauncher = true, Icon = "@drawable/mural", Theme = "@android:style/Theme.NoTitleBar")]
     public class MenuActivity : Activity
     {
+        //Hier worden functies aan de 3 knoppen in het hoofdmenu toegewezen
+        //Elke knop start een bepaalde Activity
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Menu);
+            SetContentView(Resource.Layout.hoofdmenu);
 
-            Button button = FindViewById<Button>(Resource.Id.button_vaste_route);
-            button.Click += delegate
+            Button btnVasteRoute = FindViewById<Button>(Resource.Id.button_vaste_route);
+            btnVasteRoute.Click += delegate
             {
                 StartActivity(typeof(MapActivity));
             };
-            Button button1 = FindViewById<Button>(Resource.Id.button_eigen_route);
-            button1.Click += delegate
+            Button btnEigenRoute = FindViewById<Button>(Resource.Id.button_eigen_route);
+            btnEigenRoute.Click += delegate
             {
                 StartActivity(typeof(EigenActivity));
             };
-            Button button2 = FindViewById<Button>(Resource.Id.button_instellingen);
-            button2.Click += delegate
+            Button btnInstellingen = FindViewById<Button>(Resource.Id.button_instellingen);
+            btnInstellingen.Click += delegate
             {
-                StartActivity(typeof(InstellingenActivity));
+                StartActivity(typeof(InformatieActivity));
             };
         }
     }

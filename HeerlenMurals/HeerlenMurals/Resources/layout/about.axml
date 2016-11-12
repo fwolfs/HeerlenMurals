@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <TextView
+        android:id="@+id/titel"
+        android:text="@string/Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/toolbar"
+        android:paddingTop="8dp"
+        android:paddingBottom="36dp" />
+    <TextView
+        android:id="@+id/informatie"
+        android:text="Tik op een rode marker op de kaart om meer informatie over een mural te zien \n \n op het scherm met de kaart, vind u meer informatie over standaardroutes. \n  Als u zelf een route wilt samenstellen, kijk dan bij het hoofdmenu onder 'Eigen route samenstellen'"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titel"
+        android:gravity="center" />
+    <ImageView
+        android:src="@drawable/heerlen"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:gravity="center"
+        android:id="@+id/gemeente_heerlen"
+        android:layout_below="@id/informatie" />
+    <ImageView
+        android:src="@drawable/zuyd"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:gravity="center"
+        android:id="@+id/zuyd_hogeschool"
+        android:layout_below="@id/gemeente_heerlen"
+        android:layout_marginTop="4.5dp" />
+    <TextView
+        android:id="@+id/signature"
+        android:text="Gemaakt door Dani Truijen, Pascal Vos &amp; Folkert Wolfs \n Zuyd Hogeschool Heerlen 2016 \n \n Make Heerlen Great again!"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/zuyd_hogeschool" />
+</RelativeLayout>
