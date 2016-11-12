@@ -1,5 +1,5 @@
 ﻿//Gemaakt door Pascal Vos, Dani Truijen, Folkert Wolfs
-//Gemaak in 2016 op Hogeschool Zuyd
+//Gemaakt in 2016 op Hogeschool Zuyd
 
 using Android.App;
 using Android.OS;
